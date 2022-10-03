@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Assigment</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            justify-content: left;
+            text-align: center;
+            background: rgb(139, 153, 153);
+        }
+
+        body h1,
+        input {
+            padding: 10px;
+        }
+
+        #result {
+            font: large bold;
+            line-height: 1.8;
+            color: rgb(49, 21, 21);
+            margin: 15px;
+            letter-spacing: 3px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 style="font-weight: 700;">Find your next 3 numbers:</h1>
+    <input id="input" type="number" placeholder="Enter your number"> <span>
+        <button type="button" id="button" onclick="add()"
+            style="background: rgb(113, 189, 132); cursor: pointer; padding: 10px;">Enter</button></span>
+    <p id="result">Result</p>
+
+
+    <script>
+       function add() {
+        var nterms = 3;
+        var a = document.getElementById("input").value;
+        var c = 0;
+        var count = 0;
+        var ans = new Array( );
+
+        if (a<0){
+            document.getElementById("result").innerHTML= "please enter a positive value";
+        }
+        else{
+        while (count < nterms){
+           
+            nth = parseInt(a) + 2;
+            c = parseInt(nth);
+            ans.push(c)
+            a = nth;
+            count += 1;
+            document.getElementById("result").innerHTML= "Result: "+ans ;
+        }
+    }
+    };
+
+    </script>
+</body>
+
+</html>
